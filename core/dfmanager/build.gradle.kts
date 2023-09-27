@@ -35,5 +35,6 @@ android {
 dependencies {
 
     implementation(KotlinLibraries.coreKtx)
+    implementation(Libraries.dynamicFeatureManager)
     testImplementation(TestingLibraries.jUnit)
 }
