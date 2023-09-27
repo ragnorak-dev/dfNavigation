@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -57,20 +57,20 @@ android {
 dependencies {
 
     implementation(UILibraries.activityCompose)
-    api(KotlinLibraries.coreKtx)
-    api(KotlinLibraries.lifecycleRuntime)
-    api(platform(UILibraries.composeBom))
-    api(UILibraries.composeUi)
-    api(UILibraries.composeGraphics)
-    api(UILibraries.composeTooling)
-    api(UILibraries.composeMaterial3)
-    api(Libraries.koinCore)
-    api(Libraries.koinAndroid)
-    api(Libraries.koinCompose)
+    implementation(KotlinLibraries.coreKtx)
+    implementation(KotlinLibraries.lifecycleRuntime)
+    implementation(platform(UILibraries.composeBom))
+    implementation(UILibraries.composeUi)
+    implementation(UILibraries.composeGraphics)
+    implementation(UILibraries.composeTooling)
+    implementation(UILibraries.composeMaterial3)
+    implementation(Libraries.koinCore)
+    implementation(Libraries.koinAndroid)
+    implementation(Libraries.koinCompose)
     testImplementation(TestingLibraries.jUnit)
     androidTestImplementation(TestingLibraries.jUnitAndroid)
     androidTestImplementation(TestingLibraries.espressoCore)
-    androidTestImplementation(TestingLibraries.uiJunit)
+    androidTestImplementation(TestingLibraries.composeJunit)
     debugImplementation(TestingLibraries.uiTooling)
     debugImplementation(TestingLibraries.uiManifest)
 }

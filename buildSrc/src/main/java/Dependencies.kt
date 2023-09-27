@@ -1,5 +1,3 @@
-import org.gradle.api.JavaVersion
-
 object ApplicationId {
     const val applicationId = "com.ragnorakdev.ui_router"
 }
@@ -19,7 +17,7 @@ object Versions {
     const val espressoCore = "3.5.1"
     const val koinCore = "3.5.0"
     const val koinAndroid = "3.5.0"
-    const val koinCompose = "1.1.0"
+    const val koinCompose = "3.5.0"
 }
 
 
@@ -47,7 +45,7 @@ object TestingLibraries {
     const val jUnit = "junit:junit:${Versions.junit}"
     const val jUnitAndroid = "androidx.test.ext:junit:${Versions.junitExt}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
-    const val uiJunit = "androidx.compose.ui:ui-test-junit4"
+    const val composeJunit = "androidx.compose.ui:ui-test-junit4"
     const val uiTooling = "androidx.compose.ui:ui-tooling"
     const val uiManifest = "androidx.compose.ui:ui-test-manifest"
 }
