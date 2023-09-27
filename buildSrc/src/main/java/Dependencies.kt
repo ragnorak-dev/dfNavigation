@@ -17,13 +17,21 @@ object Versions {
     const val junit = "4.13.2"
     const val junitExt = "1.1.5"
     const val espressoCore = "3.5.1"
+    const val koinCore = "3.5.0"
+    const val koinAndroid = "3.5.0"
+    const val koinCompose = "1.1.0"
 }
 
 
 object KotlinLibraries {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleRuntime}"
+}
 
+object Libraries {
+    const val koinCore = "io.insert-koin:koin-core:${Versions.koinCore}"
+    const val koinAndroid = "io.insert-koin:koin-android:${Versions.koinAndroid}"
+    const val koinCompose = "io.insert-koin:koin-androidx-compose:${Versions.koinCompose}"
 }
 
 object UILibraries {
