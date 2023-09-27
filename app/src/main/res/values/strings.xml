@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UI-Router</string>
+    <string name="title_dynamicfeature1">Feature 1</string>
+    <string name="title_dynamicfeature2">Feature 2</string>
+    <string name="title_dynamicfeature3">Feature 3</string>
+</resources>
