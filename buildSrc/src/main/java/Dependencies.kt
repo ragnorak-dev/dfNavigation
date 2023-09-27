@@ -18,6 +18,7 @@ object Versions {
     const val koinCore = "3.5.0"
     const val koinAndroid = "3.5.0"
     const val koinCompose = "3.5.0"
+    const val playFeature = "2.1.0"
 }
 
 
@@ -30,6 +31,8 @@ object Libraries {
     const val koinCore = "io.insert-koin:koin-core:${Versions.koinCore}"
     const val koinAndroid = "io.insert-koin:koin-android:${Versions.koinAndroid}"
     const val koinCompose = "io.insert-koin:koin-androidx-compose:${Versions.koinCompose}"
+
+    const val dynamicFeatureManager = "com.google.android.play:feature-delivery:${Versions.playFeature}"
 }
 
 object UILibraries {
