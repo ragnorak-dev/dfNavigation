@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">UI-Router</string>
-    <string name="title_dynamicfeature1">Feature 1</string>
-    <string name="title_dynamicfeature2">Feature 2</string>
-    <string name="title_dynamicfeature3">Feature 3</string>
+    <string name="title_dynamicfeature_one">Feature 1</string>
+    <string name="title_dynamicfeature_two">Feature 2</string>
+    <string name="title_dynamicfeature_three">Feature 3</string>
     <string name="title_activity_main_first_feature">MainFirstFeatureActivity</string>
     <string name="title_activity_main_second_feature">MainSecondFeatureActivity</string>
 </resources>

@@ -9,9 +9,11 @@ object Releases {
 
 object Versions {
     const val coreKtx = "1.12.0"
+    const val activityKtx = "1.7.2"
     const val lifecycleRuntime = "2.6.2"
     const val activityCompose = "1.7.2"
     const val composeBom = "2023.08.00"
+    const val composeRuntime = "1.5.1"
     const val junit = "4.13.2"
     const val junitExt = "1.1.5"
     const val espressoCore = "3.5.1"
@@ -24,6 +26,7 @@ object Versions {
 
 object KotlinLibraries {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtx}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleRuntime}"
 }
 
@@ -42,6 +45,7 @@ object UILibraries {
     const val composeGraphics = "androidx.compose.ui:ui-graphics"
     const val composeTooling = "androidx.compose.ui:ui-tooling-preview"
     const val composeMaterial3 = "androidx.compose.material3:material3"
+    const val composeRuntime = "androidx.compose.runtime:runtime:${Versions.composeRuntime}"
 }
 
 object TestingLibraries {
@@ -56,9 +60,9 @@ object TestingLibraries {
 object ModulesApp {
     const val app = ":app"
 
-    const val feature1 = ":features:dynamicfeature1"
-    const val feature2 = ":features:dynamicfeature2"
-    const val feature3 = ":features:dynamicfeature3"
+    const val featureOne = ":features:dynamicfeature_one"
+    const val featureTwo = ":features:dynamicfeature_two"
+    const val featureThree = ":features:dynamicfeature_three"
     const val uiRouter = ":core:uirouter"
     const val dfManager = ":core:dfmanager"
 }
