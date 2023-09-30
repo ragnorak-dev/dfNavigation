@@ -15,8 +15,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "UI-Router"
 include(":app")
-include(":features:dynamicfeature1")
-include(":features:dynamicfeature2")
-include(":features:dynamicfeature3")
+include(":features:dynamicfeature_one")
+include(":features:dynamicfeature_two")
+include(":features:dynamicfeature_three")
 include(":core:uirouter")
 include(":core:dfmanager")

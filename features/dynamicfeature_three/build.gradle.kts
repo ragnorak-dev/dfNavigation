@@ -1,23 +1,14 @@
 plugins {
-    id("com.android.application")
+    id("com.android.dynamic-feature")
     id("org.jetbrains.kotlin.android")
 }
-
 android {
-    namespace = ApplicationId.applicationId
+    namespace = "com.ragnorakdev.dynamicfeature_three"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = ApplicationId.applicationId
         minSdk = 28
-        targetSdk = 34
-        versionCode = Releases.versionCode
-        versionName = Releases.versionName
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     buildTypes {
@@ -29,34 +20,23 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    dynamicFeatures += setOf(
-        ModulesApp.featureOne,
-        ModulesApp.featureTwo,
-        ModulesApp.featureThree
-    )
 }
 
 dependencies {
+    implementation(project(ModulesApp.app))
     implementation(project(ModulesApp.uiRouter))
-    implementation(project(ModulesApp.dfManager))
 
     implementation(UILibraries.activityCompose)
     implementation(KotlinLibraries.coreKtx)
