@@ -1,10 +1,8 @@
 package com.ragnorakdev.dfmanager
 
-import android.content.Context
-
 class LoaderDynamicEntriesPoints {
-    fun execute(context: Context, featureId: DynamicFeaturesLoadersNames) {
-        val clazz = context.classLoader.loadClass(featureId.loaderPath)
-        clazz.newInstance()
+    fun execute(loaderPath: String) {
+        val clazz = Class.forName(loaderPath)
+        clazz.getConstructor().newInstance()
     }
 }

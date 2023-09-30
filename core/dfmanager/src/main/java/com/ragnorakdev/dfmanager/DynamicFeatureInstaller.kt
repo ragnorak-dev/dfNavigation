@@ -21,11 +21,9 @@ class DynamicFeatureInstaller(private val context: Context) {
         SplitInstallManagerFactory.create(context)
     }
 
-    fun loadDynamicFeaturesInstalled() {
-        splitInstallManager.installedModules.forEach { moduleInstalled ->
-            DynamicFeaturesLoadersNames.entries.find { moduleInstalled == it.moduleId }?.let {
-                LoaderDynamicEntriesPoints().execute(context, it)
-            }
+    fun loadDynamicFeaturesInstalled(moduleName: String, modulePathLoader: String) {
+        splitInstallManager.installedModules.find { it == moduleName}?.let {
+            LoaderDynamicEntriesPoints().execute(modulePathLoader)
         }
     }
 }
