@@ -1,7 +1,7 @@
 package com.ragnorakdev.ui_router
 
 import android.app.Application
-import com.ragnorakdev.dfmanager.DynamicFeatureInstaller
+import com.ragnorakdev.dfmanager.DynamicFeatureLoader
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -14,7 +14,7 @@ class CustomApplication: Application() {
         }
 
         DynamicFeaturesLoadersNames.entries.forEach {
-            DynamicFeatureInstaller.getInstance(this)
+            DynamicFeatureLoader.getInstance(this)
                 .loadDynamicFeaturesInstalled(moduleName = it.moduleName, modulePathLoader = it.loaderPath)
         }
     }
