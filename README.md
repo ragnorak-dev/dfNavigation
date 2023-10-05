@@ -13,10 +13,16 @@ This architecture is composed of two part:
 
 # Load dynamic modules
 
-The module responsible of load the dynamic features is 'dfmanager' 
+The module responsible for loading the dynamic features is 'dfmanager'
 - This module has two classes:
-   - DynamicFeatureLoader: It has the logic needed check if the module is installed and call to load it
-   - LoaderDynamicEntriesPoints: Via reflection, it calls to LoaderModule class, this will be explained later on
+  - DynamicFeatureLoader: It has the logic needed to  check if the module is installed and call to load it
+  - LoaderDynamicEntriesPoints: Via reflection, it calls to LoaderModule class, this will be explained later on
+- In other instance, each dynamic feature have a '{FeatureName}EntryPointsLoader', this class will be responsible of give all 'EntryPoint' of the module to 'Navigator' class
+- The app has 'DynamicFeaturesLoadersNames', where all paths of the '{FeatureName}EntryPointsLoader' are stored to call it via reflection.
+
+
+The sequence diagram is:
+
 
 # Navigate between dynamic modules
 
