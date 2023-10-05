@@ -22,6 +22,7 @@ The module responsible for loading the dynamic features is 'dfmanager'
 
 
 The sequence diagram is:
+![Load dynamic features sequence diagram drawio](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/95791faf-8bd4-43a3-be4b-3768a76819c3)
 
 
 # Navigate between dynamic modules
