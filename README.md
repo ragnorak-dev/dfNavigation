@@ -27,4 +27,7 @@ The sequence diagram is:
 
 # Navigate between dynamic modules
 
+The sequence diagram is:
+![show df view sequence diagram drawio](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/4c15f010-765d-45d7-8c95-b01f52183abc)
+
 :construction: Under construction 
