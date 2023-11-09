@@ -27,4 +27,6 @@ The sequence diagram is:
 
 # Navigate between dynamic modules
 
-:construction: Under construction 
+The module responsible for loading the dynamic features is 'uirouter'
+- This module his class:
+  - Navigator
