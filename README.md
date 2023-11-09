@@ -36,5 +36,6 @@ The Navigator class has listed all Entry Points with they identifiers in a map.
 This class, also, has the `navigationTo` function to navigate to identifier given
 
 The sequence diagram is:
+
 ![show df view sequence diagram drawio](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/4c15f010-765d-45d7-8c95-b01f52183abc)
 
