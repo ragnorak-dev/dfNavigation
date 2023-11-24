@@ -1,5 +1,7 @@
 package com.ragnorakdev.dynamicfeature_one.loader
 
+import android.app.Activity
+import com.ragnorakdev.dynamicfeature_one.MainFirstFeatureActivity
 import com.ragnorakdev.ui_router.ModulesPackages
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
@@ -10,7 +12,7 @@ class FeatureOneEntryPointsLoader {
     init {
         Navigator.addAEntryPointRoute(
             NavigationNameFeatures.FEATURE_ONE,
-            ActivityDynamicFeaturePath("${ModulesPackages.FEATURE_ONE}.MainFirstFeatureActivity")
+            ActivityDynamicFeaturePath(MainFirstFeatureActivity::class.java)
         )
     }
 
