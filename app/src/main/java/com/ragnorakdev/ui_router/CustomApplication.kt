@@ -12,10 +12,5 @@ class CustomApplication: Application() {
         startKoin {
             androidContext(this@CustomApplication)
         }
-
-        DynamicFeaturesLoadersNames.entries.forEach {
-            DynamicFeatureLoader.getInstance(this)
-                .loadDynamicFeaturesInstalled(moduleName = it.moduleName, modulePathLoader = it.loaderPath)
-        }
     }
 }
