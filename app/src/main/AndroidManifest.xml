@@ -31,8 +31,6 @@
             android:exported="false"
             tools:node="merge">
 
-            <meta-data  android:name="com.ragnorakdev.ui_router.initializer.DynamicFeatureInitializer"
-                android:value="androidx.startup" />
         </provider>
 
     </application>

@@ -55,4 +55,5 @@ dependencies {
     androidTestImplementation(TestingLibraries.composeJunit)
     debugImplementation(TestingLibraries.uiTooling)
     debugImplementation(TestingLibraries.uiManifest)
+    implementation("androidx.startup:startup-runtime:1.1.1")
 }
