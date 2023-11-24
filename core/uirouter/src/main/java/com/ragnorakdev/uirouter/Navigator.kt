@@ -1,5 +1,6 @@
 package com.ragnorakdev.uirouter
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -41,17 +42,15 @@ object Navigator {
                 GetComposeViewFromFeature(activitiesRoutes[to] as ComposableDynamicFeaturePath)
             }
         }
-
     }
 
     private fun navigateToDynamicFeature(
         context: Context,
-        to: String,
+        to: Class<out Activity>,
         infoBundle: Bundle? = null,
         registerForActivityResult: ActivityResultLauncher<Intent>? = null
     ) {
-        val intent = Intent()
-        intent.setClassName(context.packageName, to)
+        val intent = Intent(context, to)
         infoBundle?.let {
             intent.putExtra(INFO_BUNDLE, it)
         }
