@@ -31,6 +31,18 @@
             android:exported="false"
             tools:node="merge">
 
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_one.loader.FeatureOneInitializer"
+                android:value="androidx.startup"
+                tools:node="merge"/>
+
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_two.loader.FeatureTwoInitializer"
+                android:value="androidx.startup"
+                tools:node="merge"/>
+
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_three.loader.FeatureThreeInitializer"
+                android:value="androidx.startup"
+                tools:node="merge"/>
+
         </provider>
 
     </application>

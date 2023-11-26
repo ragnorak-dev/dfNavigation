@@ -20,16 +20,6 @@
             android:label="@string/title_activity_main_first_feature"
             android:theme="@style/Theme.UIRouter" />
 
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            android:exported="false"
-            tools:node="merge">
-
-            <meta-data  android:name="com.ragnorakdev.dynamicfeature_one.loader.FeatureOneInitializer"
-                android:value="androidx.startup"
-                tools:node="merge"/>
-        </provider>
     </application>
 
 </manifest>

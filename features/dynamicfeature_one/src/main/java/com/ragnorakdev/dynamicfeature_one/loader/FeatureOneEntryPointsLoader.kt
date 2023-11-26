@@ -1,8 +1,6 @@
 package com.ragnorakdev.dynamicfeature_one.loader
 
-import android.app.Activity
 import com.ragnorakdev.dynamicfeature_one.MainFirstFeatureActivity
-import com.ragnorakdev.ui_router.ModulesPackages
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
 import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath

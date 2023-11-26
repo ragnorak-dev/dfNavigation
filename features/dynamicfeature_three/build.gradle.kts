@@ -49,11 +49,11 @@ dependencies {
     implementation(Libraries.koinCore)
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinCompose)
+    implementation(Libraries.startupRuntime)
     testImplementation(TestingLibraries.jUnit)
     androidTestImplementation(TestingLibraries.jUnitAndroid)
     androidTestImplementation(TestingLibraries.espressoCore)
     androidTestImplementation(TestingLibraries.composeJunit)
     debugImplementation(TestingLibraries.uiTooling)
     debugImplementation(TestingLibraries.uiManifest)
-    implementation("androidx.startup:startup-runtime:1.1.1")
 }

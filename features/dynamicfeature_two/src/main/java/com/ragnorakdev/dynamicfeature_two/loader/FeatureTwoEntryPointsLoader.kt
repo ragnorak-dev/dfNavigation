@@ -2,7 +2,6 @@ package com.ragnorakdev.dynamicfeature_two.loader
 
 import android.app.Activity
 import com.ragnorakdev.dynamicfeature_two.MainSecondFeatureActivity
-import com.ragnorakdev.ui_router.ModulesPackages
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
 import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath
