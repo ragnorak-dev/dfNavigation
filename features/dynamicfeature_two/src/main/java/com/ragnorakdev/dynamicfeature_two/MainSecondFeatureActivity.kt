@@ -11,14 +11,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Composer
-import androidx.compose.runtime.currentComposer
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ragnorakdev.dynamicfeature_two.ui.theme.UIRouterTheme
@@ -46,6 +43,7 @@ class MainSecondFeatureActivity : ComponentActivity() {
 fun Greeting2(name: String, modifier: Modifier = Modifier) {
 
     var showFeatureThree by remember { mutableStateOf(false) }
+    var navigateSuccess by remember { mutableStateOf(true) }
 
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
         Text(
@@ -59,10 +57,18 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
             Text(text = "Navigate to feature three")
         }
         if (showFeatureThree) {
-            Navigator.NavigationTo(
+            navigateSuccess = Navigator.navigationTo(
                 to = NavigationNameFeatures.FEATURE_THREE
             )
         }
+
+        if (navigateSuccess.not()) {
+            Text(
+                text = "Navigation Error!!!!!!!",
+                modifier = modifier
+            )
+        }
+
     }
 }
 

@@ -49,7 +49,6 @@ dependencies {
     implementation(Libraries.koinCore)
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinCompose)
-    implementation(Libraries.startupRuntime)
     testImplementation(TestingLibraries.jUnit)
     androidTestImplementation(TestingLibraries.jUnitAndroid)
     androidTestImplementation(TestingLibraries.espressoCore)

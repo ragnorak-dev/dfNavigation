@@ -4,8 +4,9 @@ import com.ragnorakdev.dynamicfeature_three.ThirdFeatureView
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
 import com.ragnorakdev.uirouter.entryPointTypes.ComposableDynamicFeaturePath
+import com.ragnorakdev.uirouter.loaderpaths.LoaderEntryViews
 
-class FeatureThreeEntryPointsLoader {
+class FeatureThreeEntryPointsLoader : LoaderEntryViews {
 
     init {
         Navigator.addAEntryPointRoute(

@@ -56,7 +56,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     }
 
     if (navigate) {
-        Navigator.NavigationTo(to = NavigationNameFeatures.FEATURE_ONE)
+        Navigator.navigationTo(to = NavigationNameFeatures.FEATURE_ONE)
         navigate = false
     }
 }

@@ -26,21 +26,21 @@
         </activity>
 
         <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
+            android:name="com.ragnorakdev.uirouter.loaderpaths.RouterUiProvider"
+            android:authorities="com.ragnorakdev.uirouter.provider"
             android:exported="false"
             tools:node="merge">
 
-            <meta-data  android:name="com.ragnorakdev.dynamicfeature_one.loader.FeatureOneInitializer"
-                android:value="androidx.startup"
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_one.loader.FeatureOneEntryPointsLoader"
+                android:value=":features:dynamicfeature_one"
                 tools:node="merge"/>
 
-            <meta-data  android:name="com.ragnorakdev.dynamicfeature_two.loader.FeatureTwoInitializer"
-                android:value="androidx.startup"
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_two.loader.FeatureTwoEntryPointsLoader"
+                android:value=":features:dynamicfeature_two"
                 tools:node="merge"/>
 
-            <meta-data  android:name="com.ragnorakdev.dynamicfeature_three.loader.FeatureThreeInitializer"
-                android:value="androidx.startup"
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_three.loader.FeatureThreeEntryPointsLoader"
+                android:value=":features:dynamicfeature_three"
                 tools:node="merge"/>
 
         </provider>

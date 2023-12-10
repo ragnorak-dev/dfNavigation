@@ -4,8 +4,9 @@ import com.ragnorakdev.dynamicfeature_one.MainFirstFeatureActivity
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
 import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath
+import com.ragnorakdev.uirouter.loaderpaths.LoaderEntryViews
 
-class FeatureOneEntryPointsLoader {
+class FeatureOneEntryPointsLoader : LoaderEntryViews {
 
     init {
         Navigator.addAEntryPointRoute(

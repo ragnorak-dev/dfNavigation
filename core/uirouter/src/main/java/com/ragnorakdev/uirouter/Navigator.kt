@@ -10,12 +10,13 @@ import androidx.compose.ui.platform.LocalContext
 import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath
 import com.ragnorakdev.uirouter.entryPointTypes.ComposableDynamicFeaturePath
 
+
 object Navigator {
     const val INFO_BUNDLE = "infoBundle"
 
-    private val activitiesRoutes: HashMap<NavigationNameFeatures, EntryPointModule> = hashMapOf()
+    private val activitiesRoutes: HashMap<NavigationNameFeatures, EntryViewModule> = hashMapOf()
 
-    fun addAEntryPointRoute(id: NavigationNameFeatures, route: EntryPointModule) {
+    fun addAEntryPointRoute(id: NavigationNameFeatures, route: EntryViewModule) {
         activitiesRoutes[id] = route
     }
 
@@ -24,11 +25,11 @@ object Navigator {
     }
 
     @Composable
-    fun NavigationTo(
+    fun navigationTo(
         to: NavigationNameFeatures,
         infoBundle: Bundle? = null,
         registerForActivityResult: ActivityResultLauncher<Intent>? = null
-    ) {
+    ): Boolean =
         when {
             activitiesRoutes[to] is ActivityDynamicFeaturePath -> {
                 navigateToDynamicFeature(
@@ -37,12 +38,18 @@ object Navigator {
                     infoBundle,
                     registerForActivityResult
                 )
+                true
             }
+
             activitiesRoutes[to] is ComposableDynamicFeaturePath -> {
                 GetComposeViewFromFeature(activitiesRoutes[to] as ComposableDynamicFeaturePath)
+                true
+            }
+
+            else -> {
+               false
             }
         }
-    }
 
     private fun navigateToDynamicFeature(
         context: Context,
@@ -57,7 +64,6 @@ object Navigator {
         registerForActivityResult?.launch(intent) ?: context.startActivity(intent)
     }
 
-
     @Composable
-    fun GetComposeViewFromFeature(to: ComposableDynamicFeaturePath, ) = to.methodNameView()
+    fun GetComposeViewFromFeature(to: ComposableDynamicFeaturePath) = to.methodNameView()
 }

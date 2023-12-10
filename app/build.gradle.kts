@@ -47,6 +47,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
     dynamicFeatures += setOf(
         ModulesApp.featureOne,
         ModulesApp.featureTwo,
@@ -68,7 +69,6 @@ dependencies {
     implementation(Libraries.koinCore)
     implementation(Libraries.koinAndroid)
     implementation(Libraries.koinCompose)
-    implementation(Libraries.startupRuntime)
     testImplementation(TestingLibraries.jUnit)
     androidTestImplementation(TestingLibraries.jUnitAndroid)
     androidTestImplementation(TestingLibraries.espressoCore)

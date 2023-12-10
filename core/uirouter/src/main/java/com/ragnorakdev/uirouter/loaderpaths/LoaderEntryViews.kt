@@ -1,0 +1,3 @@
+package com.ragnorakdev.uirouter.loaderpaths
+
+interface LoaderEntryViews
