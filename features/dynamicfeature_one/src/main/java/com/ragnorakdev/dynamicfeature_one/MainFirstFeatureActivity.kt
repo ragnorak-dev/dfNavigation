@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.ragnorakdev.dynamicfeature_one.ui.theme.UIRouterTheme
 import com.ragnorakdev.uirouter.NavigationNameFeatures
 import com.ragnorakdev.uirouter.Navigator
+import com.ragnorakdev.uirouter.loaderpaths.RouterUiLoader
 
 class MainFirstFeatureActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +56,8 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
     }
 
     if (navigate) {
-        Navigator.NavigationTo(to = NavigationNameFeatures.FEATURE_TWO)
+        RouterUiLoader.getInstance(LocalContext.current)?.discoverAndInitialize(moduleName = ":features:dynamicfeature_three")
+        Navigator.navigationTo(to = NavigationNameFeatures.FEATURE_TWO)
         navigate = false
     }
 }

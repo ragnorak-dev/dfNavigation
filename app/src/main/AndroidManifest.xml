@@ -24,6 +24,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.ragnorakdev.uirouter.loaderpaths.RouterUiProvider"
+            android:authorities="com.ragnorakdev.uirouter.provider"
+            android:exported="false"
+            tools:node="merge">
+
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_one.loader.FeatureOneEntryPointsLoader"
+                android:value=":features:dynamicfeature_one"
+                tools:node="merge"/>
+
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_two.loader.FeatureTwoEntryPointsLoader"
+                android:value=":features:dynamicfeature_two"
+                tools:node="merge"/>
+
+            <meta-data  android:name="com.ragnorakdev.dynamicfeature_three.loader.FeatureThreeEntryPointsLoader"
+                android:value=":features:dynamicfeature_three"
+                tools:node="merge"/>
+
+        </provider>
+
     </application>
 
 </manifest>

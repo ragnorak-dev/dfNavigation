@@ -47,6 +47,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
     dynamicFeatures += setOf(
         ModulesApp.featureOne,
         ModulesApp.featureTwo,
@@ -56,7 +57,6 @@ android {
 
 dependencies {
     implementation(project(ModulesApp.uiRouter))
-    implementation(project(ModulesApp.dfManager))
 
     implementation(UILibraries.activityCompose)
     implementation(KotlinLibraries.coreKtx)

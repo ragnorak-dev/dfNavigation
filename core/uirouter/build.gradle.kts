@@ -49,5 +49,6 @@ dependencies {
     implementation(UILibraries.composeGraphics)
     implementation(UILibraries.composeTooling)
     implementation(UILibraries.composeMaterial3)
+
     testImplementation(TestingLibraries.jUnit)
 }

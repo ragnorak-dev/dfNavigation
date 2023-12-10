@@ -10,12 +10,12 @@ import androidx.compose.ui.platform.LocalContext
 import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath
 import com.ragnorakdev.uirouter.entryPointTypes.ComposableDynamicFeaturePath
 
+
 object Navigator {
-    const val INFO_BUNDLE = "infoBundle"
+    
+    private val activitiesRoutes: HashMap<NavigationNameFeatures, EntryViewModule> = hashMapOf()
 
-    private val activitiesRoutes: HashMap<NavigationNameFeatures, EntryPointModule> = hashMapOf()
-
-    fun addAEntryPointRoute(id: NavigationNameFeatures, route: EntryPointModule) {
+    fun addAEntryPointRoute(id: NavigationNameFeatures, route: EntryViewModule) {
         activitiesRoutes[id] = route
     }
 
@@ -23,12 +23,22 @@ object Navigator {
         activitiesRoutes.remove(id)
     }
 
+    /**
+     * Params:
+     * to: Destination ID of navigation
+     * infoBundle: Bundle to send info between Activities
+     * registerForActivityResult: Callback Launcher get the result of an Activity
+     *
+     * Return: the result of navigation,
+     * - true for the success navigation,
+     * - false for the failure navigation
+     */
     @Composable
-    fun NavigationTo(
+    fun navigationTo(
         to: NavigationNameFeatures,
         infoBundle: Bundle? = null,
         registerForActivityResult: ActivityResultLauncher<Intent>? = null
-    ) {
+    ): Boolean =
         when {
             activitiesRoutes[to] is ActivityDynamicFeaturePath -> {
                 navigateToDynamicFeature(
@@ -37,12 +47,18 @@ object Navigator {
                     infoBundle,
                     registerForActivityResult
                 )
+                true
             }
+
             activitiesRoutes[to] is ComposableDynamicFeaturePath -> {
                 GetComposeViewFromFeature(activitiesRoutes[to] as ComposableDynamicFeaturePath)
+                true
+            }
+
+            else -> {
+               false
             }
         }
-    }
 
     private fun navigateToDynamicFeature(
         context: Context,
@@ -52,12 +68,11 @@ object Navigator {
     ) {
         val intent = Intent(context, to)
         infoBundle?.let {
-            intent.putExtra(INFO_BUNDLE, it)
+            intent.putExtras(it)
         }
         registerForActivityResult?.launch(intent) ?: context.startActivity(intent)
     }
 
-
     @Composable
-    fun GetComposeViewFromFeature(to: ComposableDynamicFeaturePath, ) = to.methodNameView()
+    fun GetComposeViewFromFeature(to: ComposableDynamicFeaturePath) = to.methodNameView()
 }

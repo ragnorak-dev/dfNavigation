@@ -7,14 +7,7 @@ import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 class DynamicFeatureLoader(private val context: Context) {
 
     companion object {
-
-        private var instance: DynamicFeatureLoader? = null
-
-        fun getInstance(context: Context): DynamicFeatureLoader =
-            instance
-                ?: synchronized(this) {
-                    instance ?: DynamicFeatureLoader(context).also { instance = it }
-                }
+        fun getInstance(context: Context): DynamicFeatureLoader = DynamicFeatureLoader(context)
     }
 
     private val splitInstallManager: SplitInstallManager by lazy {
