@@ -18,7 +18,7 @@
             android:name=".MainSecondFeatureActivity"
             android:exported="false"
             android:label="@string/title_activity_main_second_feature"
-            android:theme="@style/Theme.UIRouter" />
+            android:theme="@style/Theme.DfNavigator" />
 
     </application>
 

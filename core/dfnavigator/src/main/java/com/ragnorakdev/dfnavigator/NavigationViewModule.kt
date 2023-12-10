@@ -1,0 +1,3 @@
+package com.ragnorakdev.dfnavigator
+
+interface NavigationViewModule

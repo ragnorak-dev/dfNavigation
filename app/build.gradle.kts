@@ -56,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation(project(ModulesApp.uiRouter))
+    implementation(project(ModulesApp.dfNavigator))
 
     implementation(UILibraries.activityCompose)
     implementation(KotlinLibraries.coreKtx)

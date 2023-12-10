@@ -1,14 +1,17 @@
 plugins {
-    id("com.android.dynamic-feature")
+    id("com.android.library")
     id("org.jetbrains.kotlin.android")
 }
+
 android {
-    namespace = "com.ragnorakdev.dynamicfeature_three"
+    namespace = "com.ragnorakdev.dfnavigator"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 28
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -27,32 +30,25 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
-
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
 dependencies {
-    implementation(project(ModulesApp.app))
-    implementation(project(ModulesApp.dfNavigator))
 
-    implementation(UILibraries.activityCompose)
     implementation(KotlinLibraries.coreKtx)
-    implementation(KotlinLibraries.lifecycleRuntime)
+    implementation(KotlinLibraries.activityKtx)
+    implementation(UILibraries.composeRuntime)
     implementation(platform(UILibraries.composeBom))
     implementation(UILibraries.composeUi)
     implementation(UILibraries.composeGraphics)
     implementation(UILibraries.composeTooling)
     implementation(UILibraries.composeMaterial3)
-    implementation(Libraries.koinCore)
-    implementation(Libraries.koinAndroid)
-    implementation(Libraries.koinCompose)
+
     testImplementation(TestingLibraries.jUnit)
-    androidTestImplementation(TestingLibraries.jUnitAndroid)
-    androidTestImplementation(TestingLibraries.espressoCore)
-    androidTestImplementation(TestingLibraries.composeJunit)
-    debugImplementation(TestingLibraries.uiTooling)
-    debugImplementation(TestingLibraries.uiManifest)
 }
