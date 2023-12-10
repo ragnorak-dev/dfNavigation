@@ -12,8 +12,7 @@ import com.ragnorakdev.uirouter.entryPointTypes.ComposableDynamicFeaturePath
 
 
 object Navigator {
-    const val INFO_BUNDLE = "infoBundle"
-
+    
     private val activitiesRoutes: HashMap<NavigationNameFeatures, EntryViewModule> = hashMapOf()
 
     fun addAEntryPointRoute(id: NavigationNameFeatures, route: EntryViewModule) {
@@ -24,6 +23,16 @@ object Navigator {
         activitiesRoutes.remove(id)
     }
 
+    /**
+     * Params:
+     * to: Destination ID of navigation
+     * infoBundle: Bundle to send info between Activities
+     * registerForActivityResult: Callback Launcher get the result of an Activity
+     *
+     * Return: the result of navigation,
+     * - true for the success navigation,
+     * - false for the failure navigation
+     */
     @Composable
     fun navigationTo(
         to: NavigationNameFeatures,
@@ -59,7 +68,7 @@ object Navigator {
     ) {
         val intent = Intent(context, to)
         infoBundle?.let {
-            intent.putExtra(INFO_BUNDLE, it)
+            intent.putExtras(it)
         }
         registerForActivityResult?.launch(intent) ?: context.startActivity(intent)
     }
