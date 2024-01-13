@@ -18,7 +18,7 @@
             android:name=".MainFirstFeatureActivity"
             android:exported="false"
             android:label="@string/title_activity_main_first_feature"
-            android:theme="@style/Theme.UIRouter" />
+            android:theme="@style/Theme.DfNavigator" />
 
     </application>
 

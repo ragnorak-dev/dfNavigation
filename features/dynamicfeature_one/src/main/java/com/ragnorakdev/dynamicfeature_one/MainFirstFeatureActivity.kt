@@ -19,16 +19,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.ragnorakdev.dynamicfeature_one.ui.theme.UIRouterTheme
-import com.ragnorakdev.uirouter.NavigationNameFeatures
-import com.ragnorakdev.uirouter.Navigator
-import com.ragnorakdev.uirouter.loaderpaths.RouterUiLoader
+import com.ragnorakdev.dfnavigator.Navigator
+import com.ragnorakdev.dfnavigator.loaderpaths.DfNavigatorLoader
+import com.ragnorakdev.dynamicfeature_one.ui.theme.FeatureTheme
+import com.ragnorakdev.dfnavsample.NavigationNameFeatures
 
 class MainFirstFeatureActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            UIRouterTheme {
+            FeatureTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -56,8 +56,8 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
     }
 
     if (navigate) {
-        RouterUiLoader.getInstance(LocalContext.current)?.discoverAndInitialize(moduleName = ":features:dynamicfeature_three")
-        Navigator.navigationTo(to = NavigationNameFeatures.FEATURE_TWO)
+        DfNavigatorLoader.getInstance(LocalContext.current)?.discoverAndInitialize(moduleName = ":features:dynamicfeature_three")
+        Navigator.navigationTo(to = NavigationNameFeatures.FEATURE_TWO.moduleName)
         navigate = false
     }
 }
@@ -65,7 +65,7 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview2() {
-    UIRouterTheme {
+    FeatureTheme {
         Greeting2("Android")
     }
 }

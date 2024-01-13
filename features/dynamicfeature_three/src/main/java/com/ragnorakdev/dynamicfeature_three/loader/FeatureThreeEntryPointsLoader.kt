@@ -1,16 +1,16 @@
 package com.ragnorakdev.dynamicfeature_three.loader
 
+import com.ragnorakdev.dfnavigator.Navigator
+import com.ragnorakdev.dfnavigator.navigationViewTypes.ComposableDynamicFeaturePath
+import com.ragnorakdev.dfnavigator.loaderpaths.LoaderDfNavigatorViews
 import com.ragnorakdev.dynamicfeature_three.ThirdFeatureView
-import com.ragnorakdev.uirouter.NavigationNameFeatures
-import com.ragnorakdev.uirouter.Navigator
-import com.ragnorakdev.uirouter.entryPointTypes.ComposableDynamicFeaturePath
-import com.ragnorakdev.uirouter.loaderpaths.LoaderEntryViews
+import com.ragnorakdev.dfnavsample.NavigationNameFeatures
 
-class FeatureThreeEntryPointsLoader : LoaderEntryViews {
+class FeatureThreeEntryPointsLoader : LoaderDfNavigatorViews {
 
     init {
         Navigator.addAEntryPointRoute(
-            NavigationNameFeatures.FEATURE_THREE,
+            NavigationNameFeatures.FEATURE_THREE.moduleName,
             ComposableDynamicFeaturePath { ThirdFeatureView() }
         )
     }

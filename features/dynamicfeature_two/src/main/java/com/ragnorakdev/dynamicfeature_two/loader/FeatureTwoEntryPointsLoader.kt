@@ -1,16 +1,16 @@
 package com.ragnorakdev.dynamicfeature_two.loader
 
+import com.ragnorakdev.dfnavigator.Navigator
+import com.ragnorakdev.dfnavigator.navigationViewTypes.ActivityDynamicFeaturePath
+import com.ragnorakdev.dfnavigator.loaderpaths.LoaderDfNavigatorViews
 import com.ragnorakdev.dynamicfeature_two.MainSecondFeatureActivity
-import com.ragnorakdev.uirouter.NavigationNameFeatures
-import com.ragnorakdev.uirouter.Navigator
-import com.ragnorakdev.uirouter.entryPointTypes.ActivityDynamicFeaturePath
-import com.ragnorakdev.uirouter.loaderpaths.LoaderEntryViews
+import com.ragnorakdev.dfnavsample.NavigationNameFeatures
 
-class FeatureTwoEntryPointsLoader : LoaderEntryViews {
+class FeatureTwoEntryPointsLoader : LoaderDfNavigatorViews {
 
     init {
         Navigator.addAEntryPointRoute(
-            NavigationNameFeatures.FEATURE_TWO,
+            NavigationNameFeatures.FEATURE_TWO.moduleName,
             ActivityDynamicFeaturePath(MainSecondFeatureActivity::class.java)
         )
     }

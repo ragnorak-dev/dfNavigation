@@ -66,5 +66,5 @@ object ModulesApp {
     const val featureOne = ":features:dynamicfeature_one"
     const val featureTwo = ":features:dynamicfeature_two"
     const val featureThree = ":features:dynamicfeature_three"
-    const val uiRouter = ":core:uirouter"
+    const val dfNavigator = ":core:dfnavigator"
 }
