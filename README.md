@@ -15,9 +15,10 @@ This architecture is composed of two part:
 
 The first step is create in each dynamic feature a implementation of `LoaderDfNavigatorViews` interface:
 - this implementation is the responsible of give all `NavigationViewModule` of the module to 'Navigator' class
-Once this is created, It's need to call to `DfNavigatorProvider` in the app Manifest adding as metadata each Loader path
+Once this is created, It's need to call to `DfNavigatorProvider` in the app Manifest adding as metadata each Loader path witch will call to `DfNavigatorLoader` to discover and instance the implementation of `LoaderDfNavigatorViews`
 
-  
+  ![sequence diagram navigator provider](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/b865b388-0238-4ec7-860d-b1b9a032e28a)
+
 # Navigate between dynamic modules
 
 The Navigator class has listed all Entry Points with they identifiers in a map.
