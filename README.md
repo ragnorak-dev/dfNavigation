@@ -17,7 +17,8 @@ The first step is create in each dynamic feature a implementation of `LoaderDfNa
 - this implementation is the responsible of give all `NavigationViewModule` of the module to 'Navigator' class
 Once this is created, It's need to call to `DfNavigatorProvider` in the app Manifest adding as metadata each Loader path witch will call to `DfNavigatorLoader` to discover and instance the implementation of `LoaderDfNavigatorViews`
 
-  ![sequence diagram navigator provider](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/b865b388-0238-4ec7-860d-b1b9a032e28a)
+![sequence diagram navigator provider drawio](https://github.com/ragnorak-dev/UIRouter-android/assets/7957314/2dcdb70c-97a9-4ac7-9749-d19be179264d)
+
 
 # Navigate between dynamic modules
 
