@@ -13,7 +13,7 @@ class DfNavigatorLoader(context: Context) {
     private val mContext: WeakReference<Context> = WeakReference(context)
 
     companion object {
-        const val SECTION_NAME = "routerUI"
+        const val SECTION_NAME = "dfNavigatorLoader"
         private var sInstance: DfNavigatorLoader? = null
         private val sLock = Any()
 

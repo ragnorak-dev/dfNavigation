@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UI-Router</string>
+    <string name="app_name">dfNavigatorExample</string>
     <string name="title_dynamicfeature_one">Feature 1</string>
     <string name="title_dynamicfeature_two">Feature 2</string>
     <string name="title_dynamicfeature_three">Feature 3</string>

@@ -1,5 +1,5 @@
 object ApplicationId {
-    const val applicationId = "com.ragnorakdev.ui_router"
+    const val applicationId = "com.ragnorakdev.dfNavigator"
 }
 
 object Releases {

@@ -20,7 +20,7 @@ class DfNavigatorProvider : ContentProvider() {
                    // Ignored to allow add loader of dynamic feature not installed
                 }
             } else {
-                Log.w("ROUTER_UI_PROVIDER", "Deferring initialization because `applicationContext` is null.")
+                Log.w("DfNavigatorProvider", "Deferring initialization because `applicationContext` is null.")
             }
         } else {
             throw Exception("Context cannot be null")
