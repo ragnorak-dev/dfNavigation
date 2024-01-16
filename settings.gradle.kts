@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UI-Router"
+rootProject.name = "dfNavigator"
 include(":app")
 include(":features:dynamicfeature_one")
 include(":features:dynamicfeature_two")

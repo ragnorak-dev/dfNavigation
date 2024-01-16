@@ -7,12 +7,10 @@ import com.ragnorakdev.dynamicfeature_one.MainFirstFeatureActivity
 import com.ragnorakdev.dfnavsample.NavigationNameFeatures
 
 class FeatureOneEntryPointsLoader : LoaderDfNavigatorViews {
-
     init {
         Navigator.addAEntryPointRoute(
             NavigationNameFeatures.FEATURE_ONE.moduleName,
             ActivityDynamicFeaturePath(MainFirstFeatureActivity::class.java)
         )
     }
-
 }
